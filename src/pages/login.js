@@ -1,10 +1,9 @@
-import BasicLayout from "@/components/ui/layout/basicLayout";
 import React from "react";
+import UserLogin from "@/components/modules/login";
+import BasicLayout from "@/components/ui/layout/basicLayout";
 
-const Login = () => {
-  return <div>login</div>;
-};
-Login.getLayout = function (page) {
-  return <BasicLayout>{page}</BasicLayout>;
-};
+const Login = () => <UserLogin />;
+
+Login.getLayout = (page) => <BasicLayout>{page}</BasicLayout>;
+
 export default Login;

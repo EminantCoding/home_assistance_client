@@ -4,7 +4,6 @@ const BasicLayout = ({ children }) => {
   return (
     <>
       <main>{children}</main>
-      <div>footer</div>
     </>
   );
 };
