@@ -1,3 +1,15 @@
 .login_container{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img {
+    width:100%;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
 }
