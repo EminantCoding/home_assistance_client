@@ -1,0 +1,7 @@
+.iconContainer{
+    position: absolute;
+    font-size: 1.4rem;
+    right: 5px;
+    top: 10px;
+    color: var(--error-color)
+}

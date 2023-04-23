@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./login.module.css";
 import Card from "@/components/ui/card";
 import Image from "@/components/ui/image";
+import LoginForm from "./form";
 
 const UserLogin = () => {
   return (
@@ -12,7 +13,7 @@ const UserLogin = () => {
           cls={classes.img}
           alt=""
         />
-        hi
+        <LoginForm />
       </Card>
     </div>
   );

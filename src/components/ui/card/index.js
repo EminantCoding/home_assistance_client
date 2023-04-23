@@ -6,9 +6,7 @@ import Image from "../image";
 const Card = ({ children }) => {
   return (
     <div className={styles.card_container}>
-      <div class={styles.card_content}>
-        {children}
-      </div>
+      <div className={styles.card_content}>{children}</div>
     </div>
   );
 };

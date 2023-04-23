@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root {
-  --font-family-primary:"Montserrat"
+  --font-family-primary:"Montserrat";
+  --primary-color:#FF6D60;
+  --error-color:#d32f2f;
+  --warning-color:#ed6c02;
+  --success-color:#2e7d32;
+
+  --error-border-color:#ef5350;
+  --warning-border-color:#ff9800;
+  --success-border-color:#4caf50;
+  
+  --border:#c9c6c6;
 }
 
 * {
