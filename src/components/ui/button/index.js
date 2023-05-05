@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import classes from "./button.module.css";
 
 const Button = (props) => {
-  const { text, onClick } = props;
+  const { text, onClick, type = "button" } = props;
   return (
     <Fragment>
-      <button onClick={onClick} className={classes.button}>
+      <button onClick={onClick} className={classes.button} type={type}>
         {text}
       </button>
     </Fragment>
@@ -14,6 +14,7 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
+  type: PropTypes.string,
   text: PropTypes.string,
   onClick: PropTypes.func,
 };

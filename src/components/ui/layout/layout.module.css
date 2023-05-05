@@ -1,0 +1,13 @@
+.header_container{
+    padding: .85rem;
+    margin: 0;
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    position: sticky;
+}

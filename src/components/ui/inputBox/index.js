@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classes from "./inputBox.module.css";
 import Exclamation from "../icons/exclamation";
+import Close from "../icons/close";
 
 const InputBox = (props) => {
   const {
@@ -13,8 +14,13 @@ const InputBox = (props) => {
     styles = {},
     name = "",
     labelText = "",
+    onBlur,
     errors = {},
+    onClear,
   } = props;
+  const onClearClickHandler = () => {
+    onClear(name);
+  };
   return (
     <div className={classes.inputContainer}>
       <label htmlFor={name} className={classes.inputLabel}>
@@ -25,14 +31,14 @@ const InputBox = (props) => {
           id={id || name}
           type={type}
           onChange={onChange}
+          onBlur={onBlur}
           className={`${classes.input} ${cls || ""}`}
           value={value || ""}
           style={styles || {}}
           name={name || ""}
         />
-        <span className={classes.iconContainer}>
-          <Exclamation />
-        </span>
+        {value.length > 0 && <Close onClick={onClearClickHandler} />}
+        {name in errors && <Exclamation color="error" />}
       </div>
       {name in errors && (
         <span className={classes.inputError}>{errors[name]}</span>
@@ -45,6 +51,8 @@ InputBox.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onClear: PropTypes.func,
   cls: PropTypes.string,
   styles: PropTypes.object,
   name: PropTypes.string,

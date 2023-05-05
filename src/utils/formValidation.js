@@ -19,10 +19,11 @@ export const emailValidator = (value) => {
 export const loginEmailValidator = (values) => {
   let isValid = true;
   const errors = {};
-  if (!values.identifier) {
+
+  if (!values.email) {
     isValid = false;
     errors.email = "Email address is required*";
-  } else if (!emailValidator(values.identifier)) {
+  } else if (!emailValidator(values.email)) {
     isValid = false;
     errors.email = "Please enter valid email address";
   }

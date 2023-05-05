@@ -30,7 +30,6 @@ const httpCall = (method) => async (url, token, payload, hasFile) => {
 
   try {
     const response = await axios.request(options);
-
     return Promise.resolve(response);
   } catch (err) {
     return Promise.reject(err);
@@ -45,7 +44,7 @@ export const PUT = httpCall("PUT");
 export const withCatch = async (promise, ...delegate) => {
   try {
     const response = await promise(...delegate);
-    return [null, response];
+    return { error: {}, response };
   } catch (err) {
     return [err];
   }

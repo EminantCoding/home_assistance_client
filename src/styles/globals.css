@@ -5,12 +5,13 @@
   --error-color:#d32f2f;
   --warning-color:#ed6c02;
   --success-color:#2e7d32;
-
+  --white-color:#fff;
   --error-border-color:#ef5350;
   --warning-border-color:#ff9800;
   --success-border-color:#4caf50;
   
   --border:#c9c6c6;
+  --text-color:#5a5a5a;
 }
 
 * {
