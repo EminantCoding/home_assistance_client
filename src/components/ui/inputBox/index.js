@@ -37,8 +37,12 @@ const InputBox = (props) => {
           style={styles || {}}
           name={name || ""}
         />
-        {value.length > 0 && <Close onClick={onClearClickHandler} />}
-        {name in errors && <Exclamation color="error" />}
+        <div className={classes.icon_container}>
+          {value.length > 0 && (
+            <Close onClick={onClearClickHandler} color="error" />
+          )}
+          {name in errors && <Exclamation color="error" />}
+        </div>
       </div>
       {name in errors && (
         <span className={classes.inputError}>{errors[name]}</span>

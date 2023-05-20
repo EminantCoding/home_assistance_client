@@ -29,3 +29,9 @@
     font-weight: 500;
     color: var(--error-color);
 }
+.icon_container{
+    display: flex;
+    position: absolute; 
+    right: 5px;
+    top: 10px;
+}

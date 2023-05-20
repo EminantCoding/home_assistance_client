@@ -1,23 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import classes from "./icons.module.css";
 import { getIconColor } from "./common";
 
-const Close = ({ onClick, color = "" }) => {
+const Home = ({ color }) => {
   return (
     <span
       className={classes.icon_container}
       style={{ color: getIconColor(color) }}
-      onClick={onClick}
     >
-      <AiOutlineCloseCircle />
+      <AiOutlineHome color="light" />
     </span>
   );
 };
-Close.propTypes = {
+
+Home.propTypes = {
   color: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
-export default Close;
+export default Home;

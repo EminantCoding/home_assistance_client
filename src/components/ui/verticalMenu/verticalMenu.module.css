@@ -1,0 +1,21 @@
+.vertical_menu_container {
+  width: 100%;
+  min-width: 300px;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  height: 85vh;
+  z-index: -1;
+}
+
+.menu_list {
+  list-style-type: none;
+  cursor: pointer;
+}
+.menu_item {
+  padding: 0.2rem;
+  letter-spacing: 1.5px;
+}
+
+.menu_item:hover {
+  font-weight: 600
+}

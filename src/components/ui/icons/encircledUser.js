@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BiUserCircle } from "react-icons/bi";
 import classes from "./icons.module.css";
+import { getIconColor } from "./common";
 
 const EncircledUser = ({ color }) => {
   let iconColor =
@@ -13,7 +14,7 @@ const EncircledUser = ({ color }) => {
   return (
     <span
       className={classes.icon_container}
-      style={{ color: iconColor, right: 30 }}
+      style={{ color: getIconColor(color) }}
     >
       <BiUserCircle />
     </span>

@@ -1,5 +1,5 @@
 .header_container{
-    padding: .85rem;
+    padding: .8rem;
     margin: 0;
     width: 100%;
     gap: 5px;
@@ -10,4 +10,6 @@
     background-color: var(--primary-color);
     color: var(--white-color);
     position: sticky;
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -16,7 +16,8 @@ const LoginForm = () => {
   const logindata = useSelector((state) => state.formSlice);
   const userData = useSelector((state) => state.loginSlice);
   const { data: formData, errors } = logindata;
-  const [setCookie] = useCookies(["token"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+
   const dispatch = useDispatch();
 
   const onChangeHandler = (e) => {

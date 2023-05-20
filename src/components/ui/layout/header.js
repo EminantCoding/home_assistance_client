@@ -4,6 +4,8 @@ import Text from "../text";
 import Calculator from "../icons/calculator";
 import Settings from "../icons/settings";
 import EncircledUser from "../icons/encircledUser";
+import Flexbox from "../flexbox";
+import Home from "../icons/home";
 
 const Header = () => {
   return (
@@ -13,14 +15,17 @@ const Header = () => {
           Home Assistant
         </Text>
       </div>
-      <div>
-        <Text styles={{ fontWeight: 600 }}>Lakshmi Narasimha Nilaya</Text>
-      </div>
-      <div>
+      <Flexbox>
+        <Home />
+        <Text styles={{ fontWeight: 600, color: "#fff" }}>
+          Lakshmi Narasimha Nilaya
+        </Text>
+      </Flexbox>
+      <Flexbox gap={10}>
         <Calculator />
         <Settings />
         <EncircledUser />
-      </div>
+      </Flexbox>
     </div>
   );
 };

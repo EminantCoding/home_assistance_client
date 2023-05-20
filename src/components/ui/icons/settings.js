@@ -2,18 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BiBrightnessHalf } from "react-icons/bi";
 import classes from "./icons.module.css";
+import { getIconColor } from "./common";
 
 const Settings = ({ color }) => {
-  let iconColor =
-    color === "error"
-      ? "var(--error-color)"
-      : color === "light"
-      ? "var(--white-color)"
-      : "var(--primary-color)";
   return (
     <span
       className={classes.icon_container}
-      style={{ color: iconColor, right: 30 }}
+      style={{ color: getIconColor(color) }}
     >
       <BiBrightnessHalf color="light" />
     </span>
@@ -23,5 +18,4 @@ const Settings = ({ color }) => {
 Settings.propTypes = {
   color: PropTypes.string,
 };
-
 export default Settings;

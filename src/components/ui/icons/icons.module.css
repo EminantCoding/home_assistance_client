@@ -1,6 +1,4 @@
 .icon_container{
-    position: absolute;
+    position: relative;
     font-size: 1.4rem;
-    right: 5px;
-    top: 10px;
 }
