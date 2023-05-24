@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classes from "./text.module.css";
 
 const Text = (props) => {
-  const { children, cls = "", styles = {}, } = props;
+  const { children, cls = "", styles = {} } = props;
   return (
     <Fragment>
       <p className={`${classes.text} ${cls || ""}`} style={styles || {}}>

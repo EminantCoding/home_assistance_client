@@ -9,7 +9,9 @@ const getHeaders = (token, isEmptyBody, hasFile) => {
     ...(hasFile && {
       "Content-Type": "multipart/form-data",
     }),
-    Authorization: token ? `Bearer ${token}` : null,
+    ...(token && {
+      "x-auth-token": token,
+    }),
   };
 };
 

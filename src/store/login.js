@@ -1,5 +1,5 @@
 import apiLocations from "@/api/apiDirectory";
-import { POST, withCatch } from "@/api/services";
+import { GET, POST, withCatch } from "@/api/services";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -16,6 +16,14 @@ export const getLoggedInUser = createAsyncThunk(
     return withCatch(POST, apiLocations.LOGIN(), "", payload);
   }
 );
+
+export const getUserDetails = createAsyncThunk(
+  "login/user/me",
+  async (payload) => {
+    return withCatch(GET, apiLocations.USER_ME(), payload.token);
+  }
+);
+
 const loginUser = async (state, { payload }) => {
   const [error, response] = await withCatch(
     POST,
@@ -59,6 +67,20 @@ export const loginSlice = createSlice({
       state.isLoading = false;
     },
     [getLoggedInUser.rejected]: (state) => {
+      state = initialState;
+    },
+
+    [getUserDetails.pending]: (state) => {
+      state.isLoading = true;
+      state.isLoggedIn = false;
+    },
+    [getUserDetails.fulfilled]: (state, action) => {
+      const { data } = action.payload.response;
+      state.user = data;
+      state.isLoggedIn = true;
+      state.isLoading = false;
+    },
+    [getUserDetails.rejected]: (state) => {
       state = initialState;
     },
   },

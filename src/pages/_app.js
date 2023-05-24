@@ -4,16 +4,21 @@ import "@/styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useCookies } from "react-cookie";
+import { pageRoutes } from "@/routes/routes";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserDetails } from "@/store/login";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
   const [cookies] = useCookies(["token"]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (cookies.token) {
-      router.push("/counter");
+      dispatch(getUserDetails({ token: cookies.token }));
+      router.push(pageRoutes.counter);
     } else {
-      router.push("/login");
+      router.push(pageRoutes.login);
     }
   }, [cookies.token]);
 

@@ -1,0 +1,23 @@
+.asset_listing_container {
+  padding: 2rem;
+}
+.plus_square_container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--border);
+  border: none;
+  border-radius: 5px;
+  height: 14rem;
+  max-height: 14rem;
+  width: 14rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.addnew_asset {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}

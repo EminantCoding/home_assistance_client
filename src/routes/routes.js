@@ -1,0 +1,17 @@
+export const pageRoutes = {
+  home: "/",
+  login: "/login",
+  counter: "/counter",
+  admindashboard: "/admindashboard",
+  dashboard: "/dashboard",
+  users: "/users",
+  assets: "/assetlisting",
+  propertytaxes: "/propertytaxes",
+  transactions: "/transactions",
+  emergencycontacts: "/emergencycontacts",
+  tenantagreements: "/tenantagreements",
+  notifications: "/notifications",
+  documents: "/documents",
+  reminders: "/reminders",
+  proximities: "/proximities",
+};

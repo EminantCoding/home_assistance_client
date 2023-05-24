@@ -72,16 +72,6 @@ const LoginForm = () => {
     dispatch(setFormValidity(true, {}));
   };
 
-  const setToken = (token) => {
-    if (token) {
-      try {
-        setCookie("token", token);
-      } catch (err) {
-        setCookie("token", null);
-      }
-    }
-  };
-
   const onLoginSubmitHandler = async (event) => {
     if (event) event.preventDefault();
     const validationErrors = loginFormValidator(formData);

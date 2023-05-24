@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <Flexbox>
+      <Flexbox alignItems="flex-start">
         <aside>
           <VerticalMenu />
         </aside>

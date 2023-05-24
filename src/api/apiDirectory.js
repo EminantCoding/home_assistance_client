@@ -7,6 +7,8 @@ export const getUrl = (location) => {
 
 const apiLocations = {
   LOGIN: () => getUrl(`${apiBaseUrl}/auth`),
+  USER_ME: () => getUrl(`${apiBaseUrl}/auth/me`),
+  GET_ASSET: () => getUrl(`${apiBaseUrl}/api/asset`),
 };
 
 export default apiLocations;

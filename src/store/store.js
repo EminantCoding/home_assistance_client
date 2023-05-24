@@ -9,6 +9,7 @@ const combineReducer = combineReducers({ counterSlice, formSlice, loginSlice });
 export const makeStore = () =>
   configureStore({
     reducer: combineReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({ serializableCheck: false }),
   });
 export const wrapper = createWrapper(makeStore);
