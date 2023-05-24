@@ -5,8 +5,8 @@ const initialState = {
 };
 
 const counterReducer = {
-  increment: (state, action) => {
-    state.count = state.count + 1;
+  increment: (state, { payload }) => {
+    state.count = state.count + payload;
   },
   decrement: (state, action) => {
     state.count = state.count - 1;

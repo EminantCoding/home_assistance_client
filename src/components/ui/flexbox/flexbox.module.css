@@ -1,0 +1,7 @@
+.flex_container {
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
