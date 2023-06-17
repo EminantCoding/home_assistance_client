@@ -4,6 +4,7 @@ import classes from "./flexbox.module.css";
 
 const Flexbox = (props) => {
   const {
+    cls = "",
     justifyContent = "flex-start",
     alignItems = "center",
     gap = 10,
@@ -12,7 +13,7 @@ const Flexbox = (props) => {
   } = props;
   return (
     <div
-      className={classes.flex_container}
+      className={`${classes.flex_container} ${cls && cls}`}
       style={{
         ...styles,
         gap: `${gap}px`,

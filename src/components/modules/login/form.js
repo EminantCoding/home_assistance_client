@@ -9,7 +9,7 @@ import {
   loginFormValidator,
   loginPasswordValidator,
 } from "@/utils/formValidation";
-import { getLoggedInUser, login } from "@/store/login";
+import { getLoggedInUser } from "@/store/login";
 import { useCookies } from "react-cookie";
 
 const LoginForm = () => {
@@ -23,7 +23,6 @@ const LoginForm = () => {
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
     dispatch(setFormData({ name, value }));
-    getLoggedInUser;
   };
 
   const onBlurHandler = (e) => {

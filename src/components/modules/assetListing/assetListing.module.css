@@ -3,12 +3,13 @@
 }
 .plus_square_container {
   padding: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: var(--border);
+  background-color: var(--light);
   border: none;
   border-radius: 5px;
   height: 14rem;
@@ -20,4 +21,20 @@
   font-size: 1.5rem;
   color: var(--primary-color);
   font-weight: 600;
+}
+.asset_container{
+  display:flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+.asset_item_container{
+  width: 100%;
+}
+.asset_title{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.asset_create_edit_card_title{
+  border-left: 5px solid var(--primary-color);
+  padding-left: 5px;
 }

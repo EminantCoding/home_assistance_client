@@ -1,0 +1,17 @@
+.select_container{
+    margin: 15px 10px 15px 10px;
+}
+.inputLabel{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+.select{
+    font-size: 1rem;
+    padding: 0.4rem;
+    width: 100%;
+    height: 3.1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+}

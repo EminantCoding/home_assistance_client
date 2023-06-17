@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./card.module.css";
-import Image from "../image";
+import classes from "./card.module.css";
 
-const Card = ({ children }) => {
+const Card = ({ cls = "", styles = {}, children }) => {
   return (
-    <div className={styles.card_container}>
-      <div className={styles.card_content}>{children}</div>
+    <div className={`${classes.card_container} ${cls || ""}`} style={styles}>
+      <div className={classes.card_content}>{children}</div>
     </div>
   );
 };
 
 Card.propTypes = {
+  cls: PropTypes.string,
+  styles: PropTypes.object,
   children: PropTypes.node,
 };
 
