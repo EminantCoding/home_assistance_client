@@ -6,6 +6,7 @@ export const pageRoutes = {
   dashboard: "/dashboard",
   users: "/users",
   assets: "/assetlisting",
+  assetcreate: "/assetlisting/create",
   propertytaxes: "/propertytaxes",
   transactions: "/transactions",
   emergencycontacts: "/emergencycontacts",

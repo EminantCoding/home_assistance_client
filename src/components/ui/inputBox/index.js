@@ -13,7 +13,7 @@ const InputBox = (props) => {
     cls = "",
     styles = {},
     name = "",
-    labelText = "",
+    labelText = "text",
     onBlur,
     errors = {},
     onClear,

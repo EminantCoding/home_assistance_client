@@ -2,8 +2,7 @@
   width: 100%;
   min-width: 300px;
   background-color: var(--primary-color);
-  height: 85vh;
-  z-index: -1;
+  height: 88vh;
 }
 
 .menu_list {
