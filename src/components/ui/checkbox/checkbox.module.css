@@ -1,0 +1,13 @@
+.checkbox_container{
+    cursor: pointer;
+    display: block;
+    margin: 15px 10px 15px 10px;
+}
+.checkbox{
+    margin-right: 1rem;
+    width: 2rem;
+    height: 1.5rem;
+}
+.checkbox_container span{
+    vertical-align: super;
+}
