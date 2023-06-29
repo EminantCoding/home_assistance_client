@@ -36,6 +36,7 @@ const InputBox = (props) => {
           value={value || ""}
           style={styles || {}}
           name={name || ""}
+          placeholder={`please enter ${labelText}`}
         />
         <div className={classes.icon_container}>
           {value.length > 0 && (

@@ -9,6 +9,7 @@ const apiLocations = {
   LOGIN: () => getUrl(`${apiBaseUrl}/auth`),
   USER_ME: () => getUrl(`${apiBaseUrl}/auth/me`),
   GET_ASSET: () => getUrl(`${apiBaseUrl}/asset`),
+  PUT_ASSET: (id) => getUrl(`${apiBaseUrl}/asset/${id}`),
 };
 
 export default apiLocations;

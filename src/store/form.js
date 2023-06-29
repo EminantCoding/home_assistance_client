@@ -16,7 +16,6 @@ const formReducer = {
   },
   setFormValidity: (state, { payload }) => {
     const { isvalid, errors } = payload;
-    console.log("innerdata", payload);
 
     state.errors = errors || {};
     state.isFormValid = isvalid;
