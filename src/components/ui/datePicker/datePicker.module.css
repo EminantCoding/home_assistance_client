@@ -1,0 +1,23 @@
+.datepicker_container{
+    margin: 15px 10px 15px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.datepicker{
+    padding: 0.4rem;
+    width: 100%;
+    height: 2.65rem;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    font-family: var(--primary-family);
+}
+.datepicker_label{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+.datepicker_wrap{
+    position: relative;
+    margin-bottom: 0.65rem;
+}

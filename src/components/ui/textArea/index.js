@@ -9,7 +9,13 @@ const TextArea = (props) => {
         <label htmlFor={name} className={classes.input_label}>
           {labelText}
         </label>
-        <textarea rows={rows} cols={cols} />
+        <textarea
+          rows={rows}
+          cols={cols}
+          name={name}
+          onChange={onChange}
+          value={value}
+        />
       </div>
     </Fragment>
   );
@@ -20,6 +26,7 @@ TextArea.propTypes = {
   value: PropTypes.string,
   cols: PropTypes.number,
   rows: PropTypes.number,
+  name: PropTypes.string,
 };
 
 TextArea.defaultProps = {
